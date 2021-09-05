@@ -8,13 +8,21 @@ export default function Home() {
     <Layout>
       <section className={styles.header}>
         <div>
-          <h2>Design</h2>
-          <h3>Develop & Deploy</h3>
-          <p>UX designer & Web developer in Ottawa, ON.</p>
+          <h2>Hey!</h2>
+          <h3>I'm Jason Au</h3>
+          <p>
+            I am a computer science student at Carleton U. My passion is making
+            technology better suited for human health.
+          </p>
           <Link className={styles.btn} to="/projects">
-            My Projects
+            Check out my projects
           </Link>
         </div>
+        <img
+          src="/adobe-bike.jpg"
+          alt="banner"
+          style={{ maxWidth: "70%" }}
+        ></img>
       </section>
     </Layout>
   )

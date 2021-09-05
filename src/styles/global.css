@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap");
 
 * {
   margin: 0;
@@ -16,7 +16,7 @@ body {
 body {
   background: radial-gradient(
     at top left,
-    rgb(225, 155, 43) 0%,
+    rgb(255, 159, 28) 0%,
     rgb(107, 32, 9) 100%
   );
   background-repeat: no-repeat;
@@ -40,6 +40,14 @@ nav {
   margin: 40px auto;
 }
 
+nav #name:hover {
+  border-bottom: 3px solid #2ec4b6;
+  padding-bottom: 1px;
+  color: #2ec4b6;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+
 nav .links {
   display: inline-block;
   text-align: right;
@@ -54,16 +62,21 @@ nav .links a {
   position: relative;
 }
 
-nav a:hover {
-  border-color: white;
-}
-
 footer {
   margin-top: 30px;
   text-align: center;
-  min-height: 35vh;
+  min-height: 30vh; /* change the min height to raise the copyright p tag */
   display: flex;
   flex-direction: column;
+}
+
+footer > h3::before {
+  content: " ";
+  border: 4px solid rgb(46, 196, 182);
+  display: block;
+  margin: 0 auto;
+  margin: 30px auto;
+  width: 50px;
 }
 
 footer .social-links {
@@ -86,7 +99,7 @@ footer a {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: white;
+  background-color: #2ec4b6;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -97,7 +110,11 @@ footer a {
 }
 
 footer p {
-  color: #ffa264;
+  color: #cbf3f0;
+}
 
-  /* margin: 160px 0 0 0; */
+@media only screen and (max-width: 376px) {
+  .layout {
+    padding: 0 10px;
+  }
 }

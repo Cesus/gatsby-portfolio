@@ -1,11 +1,97 @@
 .portfolio {
   text-align: center;
 }
-.portfolio > h2 {
-  font-size: 3em;
+
+.portfolio > h5 {
+  font-size: 1.2em;
   margin-top: 80px;
 }
-.portfolio > h3 {
-  font-size: 2em;
+
+.portfolio > h5::after {
+  content: " ";
+  border: 4px solid rgb(46, 196, 182);
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 50px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 80px;
+  margin: 80px 120px;
+  text-align: left;
+}
+
+.project {
+  border-radius: 5px;
+  padding: 35px;
+  background-color: #f2f2f2;
+  -webkit-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.35);
+}
+
+.projects h3 {
+  font-size: 1.6em;
+  color: #2ec4b6;
+  margin: 0px auto 30px;
+  font-weight: 500;
+}
+
+.projects p {
+  color: #527e7f;
   font-weight: 400;
+  margin: 30px 0 25px;
+  line-height: 1.8em;
+}
+
+.projects span {
+  border-radius: 4px;
+  border: 2px solid #2ec4b6;
+  padding: 8px;
+  margin-right: 10px;
+  font-size: 0.9em;
+  color: #527e7f;
+}
+
+.projects a {
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 8px 14px;
+  font-size: 0.9em;
+  transition: all 0.15s ease;
+  border-radius: 4px;
+}
+
+.projects a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+
+#demo {
+  background-color: #d43d29;
+}
+
+#demo:hover {
+  background-color: #d86656;
+}
+
+#github {
+  background-color: #2ec4b6;
+}
+
+#github:hover {
+  background-color: #75c9c0;
+}
+
+.stack_wrapper {
+  margin-bottom: "20px";
+}
+
+@media only screen and (max-width: 376px) {
+  .stack_wrapper,
+  .code_links {
+    white-space: nowrap;
+  }
 }
