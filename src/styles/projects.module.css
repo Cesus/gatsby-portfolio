@@ -86,12 +86,33 @@
 }
 
 .stack_wrapper {
-  margin-bottom: "20px";
+  padding-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.code_links {
+  display: flex;
+}
+
+@media only screen and (max-width: 461px) {
+  .project {
+    margin-left: -60px;
+  }
 }
 
 @media only screen and (max-width: 376px) {
+  .project {
+    padding: 10px;
+    margin-left: -100px;
+  }
+
   .stack_wrapper,
   .code_links {
     white-space: nowrap;
+  }
+
+  .projectBanner {
+    display: none;
   }
 }

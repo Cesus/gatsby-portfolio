@@ -1,7 +1,8 @@
 import Layout from "../components/Layout"
 import React from "react"
 import * as styles from "../styles/home.module.css"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Home() {
   return (
@@ -15,14 +16,17 @@ export default function Home() {
             technology better suited for human health.
           </p>
           <Link className={styles.btn} to="/projects">
-            Check out my projects
+            Check out my projects!
           </Link>
         </div>
-        <img
-          src="/adobe-bike.jpg"
+        <StaticImage
+          src="../images/adobe-bike.jpg"
           alt="banner"
-          style={{ maxWidth: "70%" }}
-        ></img>
+          placeholder="blurred"
+          style={{
+            maxWidth: "70%",
+          }}
+        />
       </section>
     </Layout>
   )

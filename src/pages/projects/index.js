@@ -1,14 +1,16 @@
 import Layout from "../../components/Layout"
 import React from "react"
 import * as styles from "../../styles/projects.module.css"
-import { graphql, Link } from "gatsby"
-
+import { graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function Projects({ data }) {
   const projects = data.projects.nodes
+
+  console.log(data)
 
   return (
     <Layout>
@@ -16,9 +18,18 @@ export default function Projects({ data }) {
         <h5>Portfolio</h5>
         <div className={styles.projects}>
           {projects.map(project => (
-            // <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
             <div className={styles.project}>
               <h3>{project.frontmatter.title}</h3>
+              <GatsbyImage
+                image={getImage(project.frontmatter.thumb)}
+                alt="Banner"
+                quality={100}
+                height={10}
+                style={{
+                  maxWidth: "40%",
+                }}
+                className={styles.projectBanner}
+              />
               <div className={styles.stack_wrapper}>
                 {project.frontmatter.stack
                   .toString()
@@ -48,7 +59,6 @@ export default function Projects({ data }) {
                 </a>
               </div>
             </div>
-            // </Link>
           ))}
         </div>
       </div>
@@ -70,6 +80,15 @@ export const query = graphql`
           description
           demo
           github
+          thumb {
+            childImageSharp {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
+            }
+          }
         }
         id
       }
