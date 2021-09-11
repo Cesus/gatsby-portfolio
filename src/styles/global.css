@@ -113,8 +113,8 @@ footer p {
   color: #cbf3f0;
 }
 
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   .layout {
     padding: 5px;
   }
-}
+} */

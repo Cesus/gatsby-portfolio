@@ -3,10 +3,15 @@ import React from "react"
 import * as styles from "../styles/home.module.css"
 import { graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet"
 
 export default function Home() {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Jason Au</title>
+      </Helmet>
       <section className={styles.header}>
         <div>
           <h2>Hey!</h2>
