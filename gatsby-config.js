@@ -1,9 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -11,6 +5,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,5 +25,6 @@ module.exports = {
     title: "Jason Au",
     description: "Developer Portfolio",
     copyright: "This website is copyrighted 2021 Jason Au",
+    author: "Jason Au",
   },
 }
