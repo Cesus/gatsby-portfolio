@@ -2,12 +2,12 @@
   text-align: center;
 }
 
-.portfolio > h5 {
+.portfolio h5 {
   font-size: 1.2em;
   margin-top: 80px;
 }
 
-.portfolio > h5::after {
+.portfolio h5::after {
   content: " ";
   border: 4px solid rgb(46, 196, 182);
   display: block;
@@ -95,24 +95,30 @@
   display: flex;
 }
 
-@media only screen and (max-width: 461px) {
-  .project {
-    margin-left: -60px;
+@media only screen and (max-width: 660px) {
+  .projects {
+    margin: 80px auto;
   }
 }
 
-@media only screen and (max-width: 376px) {
-  .project {
-    padding: 10px;
-    margin-left: -100px;
-  }
-
-  .stack_wrapper,
-  .code_links {
-    white-space: nowrap;
-  }
-
+@media only screen and (max-width: 426px) {
   .projectBanner {
     display: none;
+  }
+
+  .projects {
+    margin: 80px 0px;
+  }
+
+  .project {
+    padding: 20px;
+  }
+
+  .projects h3 {
+    font-size: 1.3em;
+  }
+
+  .projects span {
+    padding: 2px;
   }
 }
