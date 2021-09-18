@@ -4,8 +4,8 @@ stack: HTML CSS React-JS Gatsby-JS
 description: Looks familiar... Oh right you're on it. Using my own colour themes that are inspired by my favourite colours and The Net Ninja to build my personal portfolio website. It's a work in progress, just like me :)
 slug: portfolio
 date: 2021-09-07T00:00:00+00:00
-demo: https://google.ca
-github: https://github.com/Cesus/OCTTC
+demo: /
+github: https://github.com/Cesus/gatsby-portfolio
 thumb: ../images/thumbs/portfolio.jpg
 ---
 
